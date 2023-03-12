@@ -14,7 +14,6 @@ def dfs(v, g):
     if v in g:
         for w in g[v]:
             dfs(w, g)
-    return
 
 dfs(1, graph)
 
