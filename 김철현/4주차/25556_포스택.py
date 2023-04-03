@@ -9,6 +9,7 @@ stack = [[], [], [], []]
 """
 무조건 stack 최상단 수보다 큰수를 삽입해야함
 """
+
 check = True
 for x in arr:
     for i in range(4):

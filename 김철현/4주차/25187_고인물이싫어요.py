@@ -31,19 +31,19 @@ arr = [0] + list(map(int, input().rstrip().split()))    # 청정수: 1 고인물
 water = [0] * (n + 1)
 for i in range(1, n + 1):
     if arr[i]:
-        water[i] = 1
+        water[i] = 1    # 청정수이면 1로
     else:
-        water[i] = -1
-parent = [i for i in range(n + 1)]
+        water[i] = -1   # 고인물이면 -1로
+parent = [i for i in range(n + 1)]  # 부모 배열 초기화
 for _ in range(m):
     a, b = map(int, input().split())
-    if find(a) != find(b):
+    if find(a) != find(b):          # 루트 노드가 다를 경우
         union(a, b)
 
 
 for _ in range(q):
-    v = int(input())    # 방문할 물탱크 번호
-    if water[find(v)] > 0:
+    v = int(input())            # 방문할 물탱크 번호
+    if water[find(v)] > 0:      # 루트 노드 물탱크만 보면 됨
         print(1)
     else:
         print(0)
