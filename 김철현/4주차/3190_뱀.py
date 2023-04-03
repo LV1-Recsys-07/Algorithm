@@ -45,9 +45,9 @@ while q:
         print(cnt)
         exit()
 
-    if direction:
-        if cnt == direction[0][0]:
-            if direction[0][1] == "D":
+    if direction:                           # 방향 설정이 남아있다면
+        if cnt == direction[0][0]:          # 해당 초 만큼 진행 시켰다면
+            if direction[0][1] == "D":      # 다음 방향으로 변경
                 idx = (idx + 1) % 4
             else:
                 idx = (idx - 1) % 4
