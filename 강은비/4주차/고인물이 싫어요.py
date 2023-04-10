@@ -11,7 +11,7 @@ water=list(map(int, sys.stdin.readline().split()))
 parent=[i for i in range(n)]
 tank=defaultdict(list)
 
-for _ in range(m):       #pipe가 있을 때 union
+for _ in range(m):       #pipe가 있을 때 같은 집합으로 union
     u, v=map(int, sys.stdin.readline().split())
     u=findp(parent, u-1)
     v=findp(parent, v-1)
