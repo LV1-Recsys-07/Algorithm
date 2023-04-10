@@ -5,7 +5,7 @@ input = sys.stdin.readline
 
 s = list(input().rstrip())
 n = len(s)
-cnt = 0
+cnt = 0     # A개수 tracking
 for i in range(n):
     if s[i] == "X":
         s[i] = "A"
