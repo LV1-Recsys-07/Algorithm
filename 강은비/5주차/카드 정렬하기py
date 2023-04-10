@@ -1,0 +1,17 @@
+import sys
+import heapq
+
+n=int(sys.stdin.readline())
+card=[int(sys.stdin.readline()) for _ in range(n)]
+heapq.heapify(card)
+
+total=0
+while len(card)>=2:
+    x=heapq.heappop(card)
+    y=heapq.heappop(card)
+    total+=x+y
+    if card:
+        heapq.heappush(card, x+y)
+
+print(total)
+
