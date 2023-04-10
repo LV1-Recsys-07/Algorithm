@@ -12,5 +12,5 @@ for x in a:
     else:                 #모든 stakc의 top보다 작다면 출력시 작은게 먼저 나오므로 불가능
         print("NO")
         break
-else:
+else:                     #모든 수가 스택에 순서대로 들어갔을 때 
     print("YES")

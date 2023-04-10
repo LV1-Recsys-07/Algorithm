@@ -1,5 +1,5 @@
 import sys
-import heapq
+import heapq                       #최대값을 계속 가져오기 위함
 
 n=int(sys.stdin.readline())
 dasom=int(sys.stdin.readline())
