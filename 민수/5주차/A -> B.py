@@ -2,7 +2,7 @@ import sys
 from collections import deque, defaultdict
 
 a, b = map(int, sys.stdin.readline().split())
-visited = defaultdict(int)
+visited = defaultdict(int) # 방문 순서 기록
 
 def bfs(x, visited) :
     
@@ -16,7 +16,7 @@ def bfs(x, visited) :
         if a == b :
             return visited[a] + 1
         
-        for i in (2 * a, 10 * a + 1) :
+        for i in (2 * a, 10 * a + 1) : # 2가지 방식으로 이동
             if i <= b and visited[i] == 0 :
                 visited[i] = visited[a] + 1
                 queue.append(i) 
