@@ -16,8 +16,6 @@ def bfs(a, b):
             if nx <= int(1e9):
                 q.append((nx, cnt + 1))
     return -1
+
 a, b = map(int, input().split())
-
-
-
 print(bfs(a, b))

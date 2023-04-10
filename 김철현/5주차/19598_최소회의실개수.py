@@ -12,11 +12,11 @@ arr.sort()
 for i in range(n):
     start, end = arr[i][0], arr[i][1]
     if not q:
-        heapq.heappush(q, (end, start))
+        heapq.heappush(q, end)
     else:
         if start >= q[0][0]:
             heapq.heappop(q)
-        heapq.heappush(q, (end, start))
+        heapq.heappush(q, end)
 
 
 print(len(q))
