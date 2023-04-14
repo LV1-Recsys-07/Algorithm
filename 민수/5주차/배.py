@@ -6,20 +6,22 @@ crane = list(map(int, sys.stdin.readline().split()))
 m = int(sys.stdin.readline())
 box = list(map(int, sys.stdin.readline().split())) 
 
-if max(crane) < max(box) : 
+if max(crane) < max(box) :  # 크레인이 들 수 있는 무게보다 박스가 무겁다면
     print(-1)
     sys.exit()
     
-crane.sort(reverse = True)
+# 내림차순 정렬
+
+crane.sort(reverse = True) 
 box.sort(reverse = True)
 
 count = 0
 
-while box : 
+while box : # 박스가 남아 있다면
     
     for i in crane : 
-        for j in box :
-            if i >= j :
+        for j in box : 
+            if i >= j : # 들 수 있으면
                 box.remove(j)
                 break
                 
