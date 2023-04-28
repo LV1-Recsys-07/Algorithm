@@ -1,0 +1,22 @@
+import sys
+from collections import deque
+
+t=int(sys.stdin.readline())
+for _ in range(t):
+    s=sys.stdin.readline().strip()
+    front=deque()  #커서 앞부분
+    rear=deque()   #커서 뒷부분
+    for x in s:
+        if x=="<":  #커서 앞으로 이동
+            if front:
+                rear.appendleft(front.pop())  #커서 뒷 부분으로 추가   
+        elif x==">": #커서 뒤로 이동
+            if rear:
+                front.append(rear.popleft())  #뒷 부분에서 앞 부분으로 추가
+        elif x=="-":
+            if front:
+                front.pop() 
+        else:
+            front.append(x)
+    front.extend(rear)
+    print("".join(front))
